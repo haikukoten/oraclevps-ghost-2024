@@ -1,4 +1,3 @@
-
 ## Ghost Blog on Oracle VPS (Lifetime Free Tier)(Ghost, Docker, mysql and Caddy)
 
 This project simplifies the setup of a Ghost blogging platform on Oracle Linux 9 using Docker Compose. It leverages the lifetime free **VM.Standard.A1.Flex** server stack for cost efficiency. 
@@ -88,18 +87,20 @@ yourdomain.com {
 ```bash
 docker compose up -d    
 ```
-## Incase website is down
+## Incase the website is down
 If the site is down, its most possibly due to Ghost CMS
 ```bash
 docker compose ps -a
 ```
-Check for the name of the image <b>ghost:latest</b>
+You may find that ghost-ghost-1 may have exited few seconds back.
+
+Check for the name of the image <b>ghost:latest</b> (maybe be ghost-ghost-1)
 ```bash
 docker start ghost-ghost-1
 ```
 (whatever the name of that ghost image)
 
-Check the logs for any errors
+Check the logs for any errors, if the log keeps going, check for site.
 ```bash
 docker logs -f ghost-ghost-1
 ```
