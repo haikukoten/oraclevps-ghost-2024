@@ -77,6 +77,12 @@ nano Caddyfile
 ```
     
 Paste the provided `Caddyfile` content, replacing `yourdomain.com` with your actual domain name.
+
+```bash
+yourdomain.com {
+    reverse_proxy ghost:2368
+}
+```
     
 5.  **Start services:**
 ```bash
